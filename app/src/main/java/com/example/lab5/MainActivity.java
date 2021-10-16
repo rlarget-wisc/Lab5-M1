@@ -14,10 +14,20 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static String usernameKey;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("com.example.lab5",Context.MODE_PRIVATE);
+
+        if(sharedPreferences.getString(MainActivity.usernameKey,"").equals("")) {
+            setContentView(R.layout.activity_main);
+        } else {
+            login();
+        }
+
     }
 
     public void onButtonClick(View view) {
@@ -25,10 +35,13 @@ public class MainActivity extends AppCompatActivity {
         String username = usernameInput.getText().toString();
 
         SharedPreferences sharedPreferences = getSharedPreferences("com.example.lab5", Context.MODE_PRIVATE);
-        sharedPreferences.edit().putString("username",username).apply();
+        sharedPreferences.edit().putString(MainActivity.usernameKey,username).apply();
 
+        login();
+    }
+
+    private void login() {
         Intent intent = new Intent(this, Welcome.class);
-        intent.putExtra("username",username);
         startActivity(intent);
     }
 }
