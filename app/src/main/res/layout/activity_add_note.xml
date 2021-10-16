@@ -7,10 +7,12 @@
     tools:context=".AddNoteActivity">
 
     <EditText
+        android:autofillHints="@string/note_hint"
         android:id="@+id/addNoteText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/note_hint"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,7 +23,7 @@
         android:id="@+id/saveNoteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/save_button"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintVertical_bias=".9"
         app:layout_constraintTop_toTopOf="parent"

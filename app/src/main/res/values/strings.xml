@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">"Notes"</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="save_button">Save</string>
+    <string name="note_hint">Add Note</string>
 </resources>
