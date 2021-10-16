@@ -16,7 +16,7 @@ import java.util.Date;
 
 public class AddNoteActivity extends AppCompatActivity {
 
-    private int noteid = -1;
+    private int noteid; // -1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
