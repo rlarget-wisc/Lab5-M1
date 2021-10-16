@@ -3,6 +3,7 @@
     <item
         android:id="@+id/logout"
         android:title="Logout"/>
+
     <item
         android:id="@+id/addNote"
         android:title="Add Note"/>
